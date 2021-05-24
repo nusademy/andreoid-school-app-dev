@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.nusademy.nusademy"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Nusademy">
+        <activity android:name=".ui.spalsh.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.home.HomeActivity" />
+
+        <activity
+            android:name=".ui.partnerteacherSchool.PartnerTeacherSchoolActivity"
+            android:label="@string/title_activity_partner_teacher_school"></activity>
+        <activity
+            android:name=".ui.managerecruitmentSchool.ManageRecruitmentActivity"
+            android:label="@string/title_activity_manage_recruitment"></activity> <!-- <activity -->
+        <!-- android:name="com.nusademy.ui.searchteacherTeacher.SearchTeacherActivity" -->
+        <!-- android:label="@string/title_activity_search_teacher"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.nusademy.ui.recruitmentTeacher.RecruitmentActivity" -->
+        <!-- android:label="@string/title_activity_recruitment"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.nusademy.ui.mainmenuTeacher.MainMenuTeacherActivity" -->
+        <!-- android:label="@string/title_activity_main_menu_teacher"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.nusademy.ui.schoolrecommendationTeacher.SchoolRecommendationActivity" -->
+        <!-- android:label="@string/title_activity_school_recommendation"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.nusademy.ui.applyschoolTeacher.ApplySchoolActivity" -->
+        <!-- android:label="@string/title_activity_apply_school"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.about.AboutActivity" -->
+        <!-- android:label="@string/title_activity_about" -->
+        <!-- android:theme="@style/Theme.Nusademy.NoActionBar" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.profile.UserProfileActivity" -->
+        <!-- android:label="@string/title_activity_user_profile" -->
+        <!-- android:theme="@style/Theme.Nusademy.NoActionBar" /> -->
+    </application>
+
+</manifest>

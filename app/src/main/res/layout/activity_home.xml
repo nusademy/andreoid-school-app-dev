@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFBFB"
+    tools:context=".ui.home.HomeActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_me"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/profile_null" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/img_me"
+        app:layout_constraintStart_toEndOf="@+id/img_me"
+        app:layout_constraintTop_toTopOf="@+id/img_me">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="School Name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="School"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bt_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="About"
+        android:textColor="@color/primary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_me" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_me">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                app:iss_auto_cycle="true"
+                app:iss_delay="2000"
+                app:iss_period="1000" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="110dp"
+                        android:layout_height="111dp"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/ic_recrut"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        tools:layout_editor_absoluteX="171dp"
+                        tools:layout_editor_absoluteY="310dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="110dp"
+                        android:layout_height="111dp"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/ic_search"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        tools:layout_editor_absoluteX="37dp"
+                        tools:layout_editor_absoluteY="310dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="110dp"
+                        android:layout_height="111dp"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/ic_invite"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        tools:layout_editor_absoluteX="171dp"
+                        tools:layout_editor_absoluteY="310dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Recruitment"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Search Teacher"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Invite Teacher"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="110dp"
+                        android:layout_height="111dp"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/ic_applylist"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        tools:layout_editor_absoluteX="171dp"
+                        tools:layout_editor_absoluteY="310dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="110dp"
+                        android:layout_height="111dp"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/ic_patner"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        tools:layout_editor_absoluteX="37dp"
+                        tools:layout_editor_absoluteY="310dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="110dp"
+                        android:layout_height="111dp"
+                        android:background="#00FFFFFF"
+                        android:src="@drawable/ic_paymet"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        tools:layout_editor_absoluteX="171dp"
+                        tools:layout_editor_absoluteY="310dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Apply List"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Patner Teacher"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Payment"
+                        android:textAlignment="center" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

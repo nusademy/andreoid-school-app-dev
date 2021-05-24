@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Nusademy</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_about">About Nusademy</string>
+    <string name="title_activity_apply_school">ApplySchoolActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_school_recommendation">SchoolRecommendationActivity</string>
+
+    //Apply School (Teacher)
+    <string name="status_apply_school">Temporary English Teacher</string>
+    <string name="title_activity_main_menu_teacher">MainMenuTeacherActivity</string>
+
+    //School Recommendation (Teacher)
+    <string name="name_school">SMK 1 Jakarta</string>
+    <string name="status_school">Need Temporary English Teacher</string>
+    <string name="date_school">12 Mei 2021</string>
+
+    //Main Menu (Teacher)
+    <string name="narrationbook_teacher">Narration Book</string>
+    <string name="passionidentifier_teacher">Passion Identifier</string>
+    <string name="schoolrecommendation_teacher">School Recommendation</string>
+    <string name="applyschool_teacher">Apply School</string>
+    <string name="invitelist_teacher">Invite List</string>
+    <string name="title_activity_recruitment">RecruitmentActivity</string>
+
+    //Recruitment (Teacher)
+    <string name="openrecruitment_teacher">Open Recruitment</string>
+    <string name="subject_teacher">Subject Teacher</string>
+    <string name="title_activity_search_teacher">SearchTeacherActivity</string>
+
+    //Search Teacher (Teacher)
+    <string name="sort_teacher">Sort</string>
+    <string name="list_teacher">List Teacher</string>
+    <string name="name_teacher">Mr John</string>
+    <string name="status_teacher">Temporary English Teacher</string>
+    <string name="date_teacher">12 Mei 2021</string>
+    <string name="title_activity_manage_recruitment">ManageRecruitmentActivity</string>
+
+    //Manage Recruitment (School)
+    <string name="subject_teacher_recruitment">Mathematics</string>
+    <string name="domicile_teacher">Surabaya</string>
+    <string name="status_teacher_recruitment">Temporary Teacher</string>
+    <string name="create_teacher">Create</string>
+    <string name="title_activity_partner_teacher_school">PartnerTeacherSchoolActivity</string>
+
+    //Partner Teacher (School)
+    <string name="date_teaching_teacher">12 Mei 2021-19 Mei 2021</string>
+
+
+</resources>

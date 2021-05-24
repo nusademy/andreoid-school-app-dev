@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:background="@drawable/shape_background"
+      android:padding="15dp"
+      android:layout_marginTop="10dp"
+      >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_logo_school"
+        android:layout_marginStart="25dp"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/logoschool" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_name_school"
+        style="@style/tv.large"
+        android:layout_marginStart="15dp"
+        android:text="@string/name_school"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_logo_school"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_status_school"
+        style="@style/tv.medium"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/iv_logo_school"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_school"
+        android:text="@string/status_school" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_date_school"
+        style="@style/tv.small"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/iv_logo_school"
+        app:layout_constraintTop_toBottomOf="@+id/txt_status_school"
+        android:text="@string/date_school" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_item_cancel"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_item_accept"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
