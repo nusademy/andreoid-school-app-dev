@@ -1,30 +1,30 @@
-package com.nusademy.nusademy.ui.inviteteacherSchool
+package com.nusademy.school.ui.inviteteacherSchool
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nusademy.nusademy.R
-import com.nusademy.nusademy.databinding.FragmentWaitingBinding
+import com.nusademy.school.R
+import com.nusademy.school.databinding.FragmentAcceptedOrRejectedBinding
 
-class WaitingFragment : Fragment(R.layout.fragment_waiting_school) {
+class AcceptedFragment : Fragment(R.layout.fragment_acceptedorrejected_school) {
 
     private lateinit var dataAdapter: InviteTeacherAdapter
-    private lateinit var waiting: String
-    private var dataBindingS: FragmentWaitingBinding? = null
+    private lateinit var accepted : String
+    private var dataBindingS: FragmentAcceptedOrRejectedBinding? = null
     private val dataBinding get() = dataBindingS!!
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val args = arguments
-        waiting = args?.getString(InviteTeacherActivity.extra_name).toString()
-        dataBindingS = FragmentWaitingBinding.bind(view)
+        accepted = args?.getString(InviteTeacherActivity.extra_name).toString()
+        dataBindingS = FragmentAcceptedOrRejectedBinding.bind(view)
 
         dataAdapter = InviteTeacherAdapter()
         dataAdapter.notifyDataSetChanged()
 
-        dataBinding.rvWaiting.apply {
+        dataBinding.rvAcceptedOrRejected.apply {
             layoutManager =
                     LinearLayoutManager(
                             context,

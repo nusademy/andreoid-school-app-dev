@@ -1,4 +1,4 @@
-package com.nusademy.nusademy
+package com.nusademy.school
 
 import org.junit.Test
 

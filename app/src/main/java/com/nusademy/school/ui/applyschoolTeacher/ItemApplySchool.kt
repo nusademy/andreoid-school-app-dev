@@ -1,4 +1,4 @@
-package com.nusademy.nusademy.ui.applyschoolTeacher
+package com.nusademy.school.ui.applyschoolTeacher
 
 data class ItemApplySchool (
     val nameSchool: String,

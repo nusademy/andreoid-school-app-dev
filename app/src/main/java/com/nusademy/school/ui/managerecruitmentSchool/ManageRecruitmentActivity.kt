@@ -1,15 +1,14 @@
-package com.nusademy.nusademy.ui.partnerteacherSchool
+package com.nusademy.school.ui.managerecruitmentSchool
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.nusademy.nusademy.R
+import com.nusademy.school.R
 
-class PartnerTeacherSchoolActivity : AppCompatActivity() {
+class ManageRecruitmentActivity : AppCompatActivity() {
     companion object {
-        const val extra_name = "extra_subject"
+        const val extra_subject = "extra_subject"
+        const val extra_domicile = "extra_domicile"
         const val extra_status = "extra_status"
-        const val extra_date_teaching = "extra_date_teaching"
-        const val extra_avatar = "extra_avatar"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

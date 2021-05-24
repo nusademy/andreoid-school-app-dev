@@ -1,4 +1,4 @@
-package com.nusademy.nusademy.ui.inviteteacherSchool
+package com.nusademy.school.ui.inviteteacherSchool
 
 data class ItemInviteTeacher (
         val nameTeacher: String,

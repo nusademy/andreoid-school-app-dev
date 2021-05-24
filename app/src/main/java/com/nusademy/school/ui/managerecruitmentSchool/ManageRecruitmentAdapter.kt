@@ -1,11 +1,9 @@
-package com.nusademy.nusademy.ui.managerecruitmentSchool
+package com.nusademy.school.ui.managerecruitmentSchool
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-import com.nusademy.nusademy.databinding.ItemsSchoolRecommendationBinding
+import com.nusademy.school.databinding.ItemsSchoolRecommendationBinding
 import com.nusademy.ui.schoolrecommendationTeacher.ItemSchoolRecommendation
 
 class ManageRecruitmentAdapter : RecyclerView.Adapter<ManageRecruitmentAdapter.ListUserViewHolder>() {

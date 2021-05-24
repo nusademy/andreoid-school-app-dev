@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.nusademy.nusademy"
+<manifest package="com.nusademy.school"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,20 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nusademy">
-        <activity android:name=".ui.spalsh.SplashActivity">
+        <activity android:name="com.nusademy.school.ui.spalsh.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.home.HomeActivity" />
+        <activity android:name="com.nusademy.school.ui.home.HomeActivity" />
 
         <activity
-            android:name=".ui.partnerteacherSchool.PartnerTeacherSchoolActivity"
+            android:name="com.nusademy.school.ui.partnerteacherSchool.PartnerTeacherSchoolActivity"
             android:label="@string/title_activity_partner_teacher_school"></activity>
         <activity
-            android:name=".ui.managerecruitmentSchool.ManageRecruitmentActivity"
+            android:name="com.nusademy.school.ui.managerecruitmentSchool.ManageRecruitmentActivity"
             android:label="@string/title_activity_manage_recruitment"></activity> <!-- <activity -->
         <!-- android:name="com.nusademy.ui.searchteacherTeacher.SearchTeacherActivity" -->
         <!-- android:label="@string/title_activity_search_teacher"> -->

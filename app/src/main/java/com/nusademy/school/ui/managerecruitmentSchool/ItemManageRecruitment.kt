@@ -1,4 +1,4 @@
-package com.nusademy.nusademy.ui.managerecruitmentSchool
+package com.nusademy.school.ui.managerecruitmentSchool
 
 data class ItemManageRecruitment (
     val subjectTeacher: String,

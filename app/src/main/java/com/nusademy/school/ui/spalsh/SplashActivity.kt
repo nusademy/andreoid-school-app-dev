@@ -1,13 +1,13 @@
-package com.nusademy.nusademy.ui.spalsh
+package com.nusademy.school.ui.spalsh
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.nusademy.nusademy.R
-import com.nusademy.nusademy.databinding.ActivitySplashBinding
-import com.nusademy.nusademy.ui.home.HomeActivity
+import com.nusademy.school.R
+import com.nusademy.school.databinding.ActivitySplashBinding
+import com.nusademy.school.ui.home.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding

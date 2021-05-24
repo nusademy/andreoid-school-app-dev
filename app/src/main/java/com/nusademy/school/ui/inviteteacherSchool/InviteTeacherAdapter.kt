@@ -1,11 +1,11 @@
-package com.nusademy.nusademy.ui.inviteteacherSchool
+package com.nusademy.school.ui.inviteteacherSchool
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.nusademy.nusademy.databinding.ItemInviteTeacherBinding
+import com.nusademy.school.databinding.ItemInviteTeacherBinding
 
 class InviteTeacherAdapter : RecyclerView.Adapter<InviteTeacherAdapter.ListUserViewHolder>() {
 

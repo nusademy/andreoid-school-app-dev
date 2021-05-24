@@ -1,16 +1,15 @@
-package com.nusademy.nusademy.ui.applylistSchool
+package com.nusademy.school.ui.inviteteacherSchool
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nusademy.nusademy.ui.applyschoolTeacher.ApplySchoolAdapter
-import com.nusademy.nusademy.R
-import com.nusademy.nusademy.databinding.FragmentWaitingBinding
+import com.nusademy.school.R
+import com.nusademy.school.databinding.FragmentWaitingBinding
 
-class WaitingApplyListSchoolFragment : Fragment(R.layout.item_invite_list_waiting) {
+class WaitingFragment : Fragment(R.layout.fragment_waiting_school) {
 
-    private lateinit var dataAdapter: ApplySchoolAdapter
+    private lateinit var dataAdapter: InviteTeacherAdapter
     private lateinit var waiting: String
     private var dataBindingS: FragmentWaitingBinding? = null
     private val dataBinding get() = dataBindingS!!
@@ -19,10 +18,10 @@ class WaitingApplyListSchoolFragment : Fragment(R.layout.item_invite_list_waitin
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val args = arguments
-        waiting = args?.getString(ApplyListSchoolActivity.extra_name).toString()
+        waiting = args?.getString(InviteTeacherActivity.extra_name).toString()
         dataBindingS = FragmentWaitingBinding.bind(view)
 
-        dataAdapter = ApplySchoolAdapter()
+        dataAdapter = InviteTeacherAdapter()
         dataAdapter.notifyDataSetChanged()
 
         dataBinding.rvWaiting.apply {

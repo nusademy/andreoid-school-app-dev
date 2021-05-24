@@ -1,16 +1,16 @@
-package com.nusademy.nusademy.ui.inviteteacherSchool
+package com.nusademy.school.ui.inviteteacherSchool
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nusademy.nusademy.R
-import com.nusademy.nusademy.databinding.FragmentAcceptedOrRejectedBinding
+import com.nusademy.school.R
+import com.nusademy.school.databinding.FragmentAcceptedOrRejectedBinding
 
-class AcceptedFragment : Fragment(R.layout.fragment_acceptedorrejected_school) {
+class RejectedFragment : Fragment(R.layout.fragment_acceptedorrejected_school) {
 
     private lateinit var dataAdapter: InviteTeacherAdapter
-    private lateinit var accepted : String
+    private lateinit var rejected: String
     private var dataBindingS: FragmentAcceptedOrRejectedBinding? = null
     private val dataBinding get() = dataBindingS!!
 
@@ -18,7 +18,7 @@ class AcceptedFragment : Fragment(R.layout.fragment_acceptedorrejected_school) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val args = arguments
-        accepted = args?.getString(InviteTeacherActivity.extra_name).toString()
+        rejected = args?.getString(InviteTeacherActivity.extra_name).toString()
         dataBindingS = FragmentAcceptedOrRejectedBinding.bind(view)
 
         dataAdapter = InviteTeacherAdapter()

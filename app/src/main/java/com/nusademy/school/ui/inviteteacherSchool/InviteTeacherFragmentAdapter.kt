@@ -1,4 +1,4 @@
-package com.nusademy.nusademy.ui.inviteteacherSchool
+package com.nusademy.school.ui.inviteteacherSchool
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
