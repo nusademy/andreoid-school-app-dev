@@ -8,6 +8,7 @@ import android.os.Looper
 import com.nusademy.school.R
 import com.nusademy.school.databinding.ActivitySplashBinding
 import com.nusademy.school.ui.home.HomeActivity
+import com.nusademy.school.ui.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
@@ -20,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         actionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, HomeActivity ::class.java)
+            val intent = Intent(this, LoginActivity ::class.java)
             startActivity(intent)
             finish()
         }, 1000)

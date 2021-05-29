@@ -60,5 +60,16 @@
     //Partner Teacher (School)
     <string name="date_teaching_teacher">12 Mei 2021-19 Mei 2021</string>
 
+    //School Profil
+    <string name="name_school_profil">SMK Negeri 1 Juwiring</string>
+    <string name="email_school_profil">smk1juwirng@mail.sch.id</string>
+    <string name="location_school_profil">Jl. Mrisen Nomor 667, Dusun I, Mrisen, Kecamatan Juwiring, Kabupaten Klaten, Jawa Tengah 57471</string>
+    <string name="website_school_profil">https://smkn1juwiring.sch.id/</string>
+    <string name="phone_school_profil">(0272) 551102</string>
+    <string name="emailnonres_school_profil">smknegeri1juwiring@yahoo.com</string>
+    <string name="changeprofil">Change Profile</string>
+    <string name="logout">Log Out</string>
+    <string name="title_activity_teacher_profil">TeacherProfilActivity</string>
+
 
 </resources>

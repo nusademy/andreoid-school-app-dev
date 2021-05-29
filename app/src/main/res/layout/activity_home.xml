@@ -7,55 +7,61 @@
     android:background="#FBFBFB"
     tools:context=".ui.home.HomeActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_me"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        app:civ_border_color="#FFFFFF"
-        app:civ_border_width="1dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/profile_null" />
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linear_profile"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/img_me"
-        app:layout_constraintStart_toEndOf="@+id/img_me"
-        app:layout_constraintTop_toTopOf="@+id/img_me">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/bt_about"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_me"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="1dp"
+            tools:src="@drawable/profile_null" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="School Name"
-            android:textColor="@color/black" />
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:text="School"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="School Name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="School"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <TextView
         android:id="@+id/bt_about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="28dp"
         android:text="About"
         android:textColor="@color/primary"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_me"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_me" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -64,7 +70,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_me">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,22 +97,22 @@
                     android:gravity="center">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/bt_recrute"
                         android:layout_width="110dp"
                         android:layout_height="111dp"
                         android:background="#00FFFFFF"
-                        android:src="@drawable/ic_recrut"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_recrut"
                         tools:layout_editor_absoluteX="171dp"
                         tools:layout_editor_absoluteY="310dp" />
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/bt_searchteacher"
                         android:layout_width="110dp"
                         android:layout_height="111dp"
                         android:background="#00FFFFFF"
-                        android:src="@drawable/ic_search"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_search"
                         tools:layout_editor_absoluteX="37dp"
                         tools:layout_editor_absoluteY="310dp" />
 
@@ -115,8 +121,8 @@
                         android:layout_width="110dp"
                         android:layout_height="111dp"
                         android:background="#00FFFFFF"
-                        android:src="@drawable/ic_invite"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_invite"
                         tools:layout_editor_absoluteX="171dp"
                         tools:layout_editor_absoluteY="310dp" />
                 </TableRow>
@@ -161,8 +167,8 @@
                         android:layout_width="110dp"
                         android:layout_height="111dp"
                         android:background="#00FFFFFF"
-                        android:src="@drawable/ic_applylist"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_applylist"
                         tools:layout_editor_absoluteX="171dp"
                         tools:layout_editor_absoluteY="310dp" />
 
@@ -171,8 +177,8 @@
                         android:layout_width="110dp"
                         android:layout_height="111dp"
                         android:background="#00FFFFFF"
-                        android:src="@drawable/ic_patner"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_patner"
                         tools:layout_editor_absoluteX="37dp"
                         tools:layout_editor_absoluteY="310dp" />
 
@@ -181,8 +187,8 @@
                         android:layout_width="110dp"
                         android:layout_height="111dp"
                         android:background="#00FFFFFF"
-                        android:src="@drawable/ic_paymet"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_paymet"
                         tools:layout_editor_absoluteX="171dp"
                         tools:layout_editor_absoluteY="310dp" />
                 </TableRow>
