@@ -47,7 +47,7 @@ class SearchTeacherAdapter : RecyclerView.Adapter<SearchTeacherAdapter.ListUserV
 //                .into(binding.ivAvatarUrl)
 
             binding.txtNameTeacher.text = data.user.fullName.toString()
-            binding.txtStatusTeacher.text = data.spesialitation.name.toString()
+            binding.txtStatusTeacher.text = data.spesialitation?.name.toString()
 
             binding.root.setOnClickListener {
                 onItemClickCallback.onItemClicked(data)

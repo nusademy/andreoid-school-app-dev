@@ -48,6 +48,7 @@ class LoginActivity : AppCompatActivity() {
                             SharedPrefManager.getInstance(applicationContext).setLogin(true)
                             SharedPrefManager.getInstance(applicationContext).setUser(
                                 response.body()?.user?.id.toString(),
+                                response.body()?.user?.school?.id.toString(),
                                 response.body()?.jwt.toString(),
                                 response.body()?.user?.fullName.toString(),
                                 response.body()?.user?.role?.name.toString()
@@ -65,7 +66,6 @@ class LoginActivity : AppCompatActivity() {
 
                 override fun onFailure(calls: Call<DataLogin>, ts: Throwable) {
                     Log.d("Error", ts.message.toString())
-
                 }
             })
     }

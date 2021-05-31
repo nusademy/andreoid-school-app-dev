@@ -4,9 +4,14 @@ import DataLogin
 import DataLogin.User
 import com.nusademy.school.dataapi.DataProfileSchool
 import com.nusademy.school.dataapi.DataTeacher
+import com.nusademy.school.dataapi.ListDataClasses
+import com.nusademy.school.dataapi.ListDataClasses.ListDataClassesItem
+import com.nusademy.school.dataapi.ListDataSubject
+import com.nusademy.school.dataapi.ListDataSubject.ListDataSubjectItem
 import com.nusademy.school.dataapi.ListDataTeacher
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -36,6 +41,26 @@ interface Api {
         @Query("user.username_contains") name: String,@Header("Authorization") token: String
     ): Call<ListDataTeacher>
 
+    @GET("classes")
+    fun getClasses(
+        @Query("school.id_contains") id: String,
+        @Query("_sort") sort: String,
+        @Header("Authorization") token: String
+    ): Call<ListDataClasses>
+
+    @GET("subjects")
+    fun getSubject(
+        @Query("class.id_contains") idclass: String,
+        @Query("_sort") sort: String,
+        @Header("Authorization") token: String
+    ): Call<ListDataSubject>
+
+
+
+
+
+
+
 
     // PUT ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     @FormUrlEncoded
@@ -50,6 +75,31 @@ interface Api {
         @Field("website") website: String?,
         ):Call<DataProfileSchool>
 
+    @FormUrlEncoded
+    @PUT("classes/{id}")
+    fun editClasses(
+        @Header("Authorization") token: String,
+        @Field("name") name: String?,
+        @Path("id") idclass: String?,
+    ):Call<ListDataClassesItem>
+
+    @FormUrlEncoded
+    @PUT("subjects/{id}")
+    fun editSubject(
+        @Header("Authorization") token: String,
+        @Field("Name") name: String?,
+        @Field("Description") description: String?,
+        @Field("Learning_objectives") objective: String?,
+        @Path("id") idsubject: String?,
+    ):Call<ListDataSubjectItem>
+
+
+
+
+
+
+
+
     // POST //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @FormUrlEncoded
@@ -58,4 +108,53 @@ interface Api {
         @Field("identifier") email: String?,
         @Field("password") password: String?,
     ):Call<DataLogin>
+
+
+    @FormUrlEncoded
+    @POST("classes")
+    fun addClasses(
+        @Header("Authorization") token: String,
+        @Field("name") name: String?,
+        @Field("school") idcschool: String?,
+    ):Call<ListDataClassesItem>
+
+
+    @FormUrlEncoded
+    @POST("subjects")
+    fun addSubject(
+        @Header("Authorization") token: String,
+        @Field("Name") name: String?,
+        @Field("Description") description: String?,
+        @Field("Learning_objectives") objective: String?,
+        @Field("class") idclass: String?,
+    ):Call<ListDataSubjectItem>
+
+
+
+
+
+
+
+
+
+    // DELETE //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @DELETE("classes/{id}")
+    fun delClasses(
+        @Header("Authorization") token: String,
+        @Path("id") idclass: String?,
+    ):Call<ListDataClassesItem>
+
+    @DELETE("subjects/{id}")
+    fun delSubject(
+        @Header("Authorization") token: String,
+        @Path("id") idclass: String?,
+    ):Call<ListDataSubjectItem>
+
+
+
+
+
+
+
+
 }

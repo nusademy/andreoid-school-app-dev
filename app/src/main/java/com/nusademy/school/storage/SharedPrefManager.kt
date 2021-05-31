@@ -19,10 +19,11 @@ class SharedPrefManager private constructor(private val mCtx: Context) {
         editor.apply()
     }
 
-    fun setUser(id:String,token:String,name:String,role:String) {
+    fun setUser(id:String,idschool:String,token:String,name:String,role:String) {
         val sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("id", id)
+        editor.putString("idschool", idschool)
         editor.putString("token", token)
         editor.putString("name", name)
         editor.putString("role", role)
@@ -34,6 +35,7 @@ class SharedPrefManager private constructor(private val mCtx: Context) {
             val sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
             return UserModel(
                 sharedPreferences.getString("id", null).toString(),
+                sharedPreferences.getString("idschool", null).toString(),
                 sharedPreferences.getString("token", null).toString(),
                 sharedPreferences.getString("name", null).toString(),
                 sharedPreferences.getString("role", null).toString()

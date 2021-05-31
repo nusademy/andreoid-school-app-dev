@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.nusademy.school"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Nusademy">
-        <activity android:name=".ui.profile.ProfileEditActivity"></activity>
+        android:theme="@style/Theme.Nusademy"
+        tools:replace="android:icon">
+        <activity android:name=".ui.classes.ClassesActivity"></activity>
+        <activity android:name=".ui.subject.SubjectActivity"></activity>
+        <activity android:name=".ui.profile.ProfileEditActivity" />
         <activity android:name=".ui.profile.ProfileActivity" />
         <activity android:name=".ui.searchteacher.SearchTeacherActivity" />
         <activity android:name=".ui.spalsh.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

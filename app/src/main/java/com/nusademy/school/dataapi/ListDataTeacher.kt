@@ -23,7 +23,7 @@ class ListDataTeacher : ArrayList<ListDataTeacherItem>(){
         @SerializedName("domicilie")
         val domicilie: Domicilie = Domicilie(),
         @SerializedName("spesialitation")
-        val spesialitation: Spesialitation = Spesialitation(),
+        val spesialitation: Spesialitation? = null,
         @SerializedName("user")
         val user: User = User(),
         @SerializedName("published_at")
@@ -69,7 +69,7 @@ class ListDataTeacher : ArrayList<ListDataTeacherItem>(){
             @SerializedName("confirmed")
             val confirmed: Boolean = false,
             @SerializedName("blocked")
-            val blocked: Boolean = false,
+            val blocked: Any? = null,
             @SerializedName("role")
             val role: Int = 0,
             @SerializedName("created_at")
@@ -83,7 +83,11 @@ class ListDataTeacher : ArrayList<ListDataTeacherItem>(){
             @SerializedName("school")
             val school: Any? = null,
             @SerializedName("teacher")
-            val teacher: Int = 0
+            val teacher: Int = 0,
+            @SerializedName("mbti_result")
+            val mbtiResult: Any? = null,
+            @SerializedName("assignToRole")
+            val assignToRole: Int = 0
         )
     }
 }

@@ -32,6 +32,10 @@ data class DataLogin(
         val school: School = School(),
         @SerializedName("teacher")
         val teacher: Any? = null,
+        @SerializedName("mbti_result")
+        val mbtiResult: Any? = null,
+        @SerializedName("assignToRole")
+        val assignToRole: Any? = null,
         @SerializedName("narration_videos")
         val narrationVideos: List<Any> = listOf(),
         @SerializedName("guest_teacher_requests")
