@@ -6,9 +6,11 @@ import com.nusademy.school.dataapi.DataProfileSchool
 import com.nusademy.school.dataapi.DataTeacher
 import com.nusademy.school.dataapi.ListDataClasses
 import com.nusademy.school.dataapi.ListDataClasses.ListDataClassesItem
+import com.nusademy.school.dataapi.ListDataGuestRequest.ListDataGuestRequestItem
 import com.nusademy.school.dataapi.ListDataSubject
 import com.nusademy.school.dataapi.ListDataSubject.ListDataSubjectItem
 import com.nusademy.school.dataapi.ListDataTeacher
+import com.nusademy.school.dataapi.ListdataTemporaryRequest.ListdataTemporaryRequestItem
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.DELETE
@@ -129,7 +131,37 @@ interface Api {
         @Field("class") idclass: String?,
     ):Call<ListDataSubjectItem>
 
+    @FormUrlEncoded
+    @POST("guest-teacher-requests")
+    fun addGuestRequest(
+        @Header("Authorization") token: String,
+        @Field("Name") name: String?,
+        @Field("Description") description: String?,
+        @Field("date_of_teaching") dateteach: String?,
+        @Field("time_start") timestart: String?,
+        @Field("time_finished") timeend: String?,
+        @Field("Notes") notes: String?,
+        @Field("top_talent") idteacher: String?,
+        @Field("school") idschool: String?,
+        @Field("class") idclass: String?,
+        @Field("target_audience") target: String?,
+        @Field("Status") status: String?,
+        @Field("CreatedBy") createdby: String?,
+    ):Call<ListDataGuestRequestItem>
 
+    @FormUrlEncoded
+    @POST("temporary-teacher-requests")
+    fun addTempRequest(
+        @Header("Authorization") token: String,
+        @Field("Name") name: String?,
+        @Field("durations") durations: String?,
+        @Field("expectations_start_teaching") dateteach: String?,
+        @Field("class") idclass: String?,
+        @Field("teacher") idteacher: String?,
+        @Field("school") idschool: String?,
+        @Field("Status") status: String?,
+        @Field("CreatedBy") createdby: String?,
+    ):Call<ListdataTemporaryRequestItem>
 
 
 

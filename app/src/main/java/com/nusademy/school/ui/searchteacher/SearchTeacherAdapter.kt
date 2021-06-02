@@ -9,6 +9,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.nusademy.school.dataapi.DataTeacher
 import com.nusademy.school.dataapi.ListDataTeacher.ListDataTeacherItem
 import com.nusademy.school.databinding.ItemListTeacherBinding
+import com.nusademy.school.ui.requestteacher.RequestTeacherActivity
+import com.nusademy.school.ui.subject.SubjectActivity
 
 class SearchTeacherAdapter : RecyclerView.Adapter<SearchTeacherAdapter.ListUserViewHolder>() {
 
@@ -50,7 +52,10 @@ class SearchTeacherAdapter : RecyclerView.Adapter<SearchTeacherAdapter.ListUserV
             binding.txtStatusTeacher.text = data.spesialitation?.name.toString()
 
             binding.root.setOnClickListener {
-                onItemClickCallback.onItemClicked(data)
+                val intent = Intent(itemView.context, RequestTeacherActivity::class.java)
+                intent.putExtra("idteacher", data.id.toString())
+//                intent.putExtras(bundle)
+                itemView.context.startActivity(intent)
             }
         }
     }
