@@ -4,12 +4,15 @@ import DataLogin
 import DataLogin.User
 import com.nusademy.school.dataapi.DataProfileSchool
 import com.nusademy.school.dataapi.DataTeacher
+import com.nusademy.school.dataapi.DataUser
 import com.nusademy.school.dataapi.ListDataClasses
 import com.nusademy.school.dataapi.ListDataClasses.ListDataClassesItem
+import com.nusademy.school.dataapi.ListDataGuestRequest
 import com.nusademy.school.dataapi.ListDataGuestRequest.ListDataGuestRequestItem
 import com.nusademy.school.dataapi.ListDataSubject
 import com.nusademy.school.dataapi.ListDataSubject.ListDataSubjectItem
 import com.nusademy.school.dataapi.ListDataTeacher
+import com.nusademy.school.dataapi.ListdataTemporaryRequest
 import com.nusademy.school.dataapi.ListdataTemporaryRequest.ListdataTemporaryRequestItem
 import retrofit2.Call
 import retrofit2.http.Body
@@ -57,11 +60,21 @@ interface Api {
         @Header("Authorization") token: String
     ): Call<ListDataSubject>
 
+    @GET("guest-teacher-requests")
+    fun getGuestRequest(
+        @Header("Authorization") token: String,
+        @Query("CreatedBy_contains") createdby: String,
+        @Query("school.id_contains") idschool: String,
+        @Query("Status_contains") status: String,
+    ): Call<ListDataGuestRequest>
 
-
-
-
-
+    @GET("temporary-teacher-requests")
+    fun getTempRequest(
+        @Header("Authorization") token: String,
+        @Query("CreatedBy_contains") createdby: String,
+        @Query("school.id_contains") idschool: String,
+        @Query("Status_contains") status: String,
+    ): Call<ListdataTemporaryRequest>
 
 
     // PUT ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -95,8 +108,29 @@ interface Api {
         @Path("id") idsubject: String?,
     ):Call<ListDataSubjectItem>
 
+    @FormUrlEncoded
+    @PUT("guest-teacher-requests/{id}")
+    fun editGuestRequest(
+        @Header("Authorization") token: String,
+        @Field("Status") status: String?,
+        @Path("id") idrequest: String?,
+    ):Call<ListDataGuestRequestItem>
 
+    @FormUrlEncoded
+    @PUT("temporary-teacher-requests/{id}")
+    fun editTempRequest(
+        @Header("Authorization") token: String,
+        @Field("Status") status: String?,
+        @Path("id") idrequest: String?,
+    ):Call<ListdataTemporaryRequestItem>
 
+    @FormUrlEncoded
+    @PUT("users/{id}")
+    fun editregister(
+        @Header("Authorization") token: String,
+        @Field("role") role: String?,
+        @Path("id") iduser: String?,
+    ):Call<DataUser>
 
 
 
@@ -110,6 +144,29 @@ interface Api {
         @Field("identifier") email: String?,
         @Field("password") password: String?,
     ):Call<DataLogin>
+
+    @FormUrlEncoded
+    @POST("auth/local/register")
+    fun register(
+        @Field("username") username: String?,
+        @Field("email") email: String?,
+        @Field("full_name") fullname: String?,
+        @Field("password") password: String?,
+        @Field("confirmed") confirm: String?,
+        @Field("assignToRole") assignrole: String?,
+    ):Call<DataLogin>
+
+    @FormUrlEncoded
+    @POST("schools")
+    fun addProfileSchool(
+        @Header("Authorization") token: String,
+        @Field("name") name: String?,
+        @Field("headmaster") headmaster: String?,
+        @Field("address") address: String?,
+        @Field("phone_number") phone_number: String?,
+        @Field("website") website: String?,
+        @Field("creator") iduser: String?,
+    ):Call<DataProfileSchool>
 
 
     @FormUrlEncoded
@@ -162,6 +219,7 @@ interface Api {
         @Field("Status") status: String?,
         @Field("CreatedBy") createdby: String?,
     ):Call<ListdataTemporaryRequestItem>
+
 
 
 

@@ -129,16 +129,4 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/logo_logout"
-        android:layout_marginTop="569dp"
-        android:layout_marginLeft="85dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/background"
-        app:srcCompat="@drawable/ic_logout"
-        tools:ignore="ContentDescription" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileEditActivity">
-
+    android:background="@drawable/bg_login"
+    tools:context=".ui.signup.SignUpActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -29,12 +29,12 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Nama Sekolah">
+            android:hint="Nama Lengkap">
 
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_namasekolah"
+                android:id="@+id/edit_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -46,12 +46,12 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Kepala Sekolah">
+            android:hint="Email">
 
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_kepalasekolah"
+                android:id="@+id/edit_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -63,59 +63,65 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Alamat">
+            android:hint="Username">
 
             <!--this is the actual edit text which takes the input-->
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_alamat"
+                android:id="@+id/edit_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField6"
+            android:id="@+id/filledTextField2"
 
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Website">
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:passwordToggleEnabled="true">
 
             <!--this is the actual edit text which takes the input-->
-
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_website"
+                android:id="@+id/edit_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:password="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField7"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Phone Number">
-
-            <!--this is the actual edit text which takes the input-->
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_phonenumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
 
         <Button
-            android:id="@+id/bt_save"
+            android:id="@+id/bt_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginTop="45dp"
-            android:text="Simpan" />
+            android:text="Register" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Don’t have an account? " />
+
+            <TextView
+                android:id="@+id/tv_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Sign In"
+                android:textColor="@color/primary"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

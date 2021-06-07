@@ -12,6 +12,8 @@ import com.nusademy.nusademy.dataapi.RetrofitClient
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.school.dataapi.DataProfileSchool
 import com.nusademy.school.databinding.ActivityProfileBinding
+import com.nusademy.school.ui.tempteacherrequest.TempTeacherRequestActivity
+import com.nusademy.school.ui.login.LoginActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,15 +22,13 @@ class ProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileBinding
     private val token= SharedPrefManager.getInstance(this).Getuser.token
-    private val id= SharedPrefManager.getInstance(this).Getuser.id
+    private val id= SharedPrefManager.getInstance(this).Getuser.idschool
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
 
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
@@ -40,6 +40,11 @@ class ProfileActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         )
+        binding.btnLogout.setOnClickListener {
+            SharedPrefManager.getInstance(applicationContext).setLogin(false)
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {
