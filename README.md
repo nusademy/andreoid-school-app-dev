@@ -1,4 +1,4 @@
-# android-dev
+# android-school-app-dev
 
 ## Description
 This repository is use for android developer to collaborate with others developers
