@@ -3,7 +3,7 @@
 ## Description
 This repository is use for android developer to collaborate with others developers
 
-## FeaturesCancel changes
+## Features
 - Login and register for School Manager
 - Edit profile School, and school manager
 - Request to Teacher
