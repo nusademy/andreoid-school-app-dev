@@ -25,7 +25,7 @@ The following are the steps to run this application locally:
 1. Make sure that git, nodejs, npm, and posgreSQL are installed on your system.
 2. Clone this repository with the following command.
 ```bash 
-git clone https://github.com/nusademy/android-dev.git
+https://github.com/nusademy/android-school-app-dev.git
 ```
 3. run sync project with Gradle Files
 4. Wait a few moments for the application to run successfully
