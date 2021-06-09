@@ -25,7 +25,7 @@ Based on the official documentation from Android Studio and our implementation, 
 
 ## Local
 The following are the steps to run this application locally:
-1. Make sure that git, nodejs, npm, and posgreSQL are installed on your system.
+1. Make sure that git, and Android Studio are installed on your system.
 2. Clone this repository with the following command.
 ```bash 
 git clone https://github.com/nusademy/android-school-app-dev.git
