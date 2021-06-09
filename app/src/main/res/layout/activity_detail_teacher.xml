@@ -47,9 +47,10 @@
 
             <TextView
                 android:id="@+id/tv_nama"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -67,9 +68,10 @@
 
             <TextView
                 android:id="@+id/tv_pendidikan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -87,9 +89,10 @@
 
             <TextView
                 android:id="@+id/tv_kampus"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -107,9 +110,10 @@
 
             <TextView
                 android:id="@+id/tv_jurusan"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -127,9 +131,10 @@
 
             <TextView
                 android:id="@+id/tv_ipk"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -147,9 +152,10 @@
 
             <TextView
                 android:id="@+id/tv_spesialisasi"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -167,9 +173,10 @@
 
             <TextView
                 android:id="@+id/tv_bio"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -187,9 +194,10 @@
 
             <TextView
                 android:id="@+id/tv_video"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -207,9 +215,10 @@
 
             <TextView
                 android:id="@+id/tv_linkedin"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -227,9 +236,10 @@
 
             <TextView
                 android:id="@+id/tv_domisili"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ahmad Tomi"
+                android:layout_weight="1"
+                android:text="-"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
