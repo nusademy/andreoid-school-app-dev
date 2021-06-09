@@ -80,7 +80,6 @@ class DetailTeacherActivity : AppCompatActivity() {
                         binding.tvDomisili.text = data?.domicilie?.name.toString()
                         binding.tvSpesialisasi.text = data?.spesialitation?.name.toString()
                         iduser=data?.user?.id.toString()
-
                         // Cek Koneksi API Gagal
                     } else {
                         Toast.makeText(applicationContext, "Failed To Get Data", Toast.LENGTH_LONG)
