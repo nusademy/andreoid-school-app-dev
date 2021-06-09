@@ -23,6 +23,7 @@ import retrofit2.Response
 class DetailTeacherActivity : AppCompatActivity() {
     private lateinit var binding:ActivityDetailTeacherBinding
     val token= SharedPrefManager.getInstance(this).Getuser.token
+    var iduser=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityDetailTeacherBinding.inflate(layoutInflater)
@@ -43,7 +44,7 @@ class DetailTeacherActivity : AppCompatActivity() {
         }
         binding.btInvite.setOnClickListener {
             val intent = Intent(applicationContext, RequestTeacherActivity::class.java)
-            intent.putExtra("idteacher", idteacher)
+            intent.putExtra("idteacher", iduser)
             startActivity(intent)
         }
     }
@@ -78,6 +79,7 @@ class DetailTeacherActivity : AppCompatActivity() {
                         binding.tvVideo.text = data?.videoBranding.toString()
                         binding.tvDomisili.text = data?.domicilie?.name.toString()
                         binding.tvSpesialisasi.text = data?.spesialitation?.name.toString()
+                        iduser=data?.user?.id.toString()
 
                         // Cek Koneksi API Gagal
                     } else {
