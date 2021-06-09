@@ -39,6 +39,7 @@ class RequestTeacherActivity : AppCompatActivity() {
     var dateteaching2=""
     var idclass=""
     var idclass2=""
+    var generic=true
     private lateinit var binding: ActivityRequestTeacherBinding
     val token= SharedPrefManager.getInstance(this).Getuser.token
     val idschool= SharedPrefManager.getInstance(this).Getuser.idschool
@@ -68,20 +69,38 @@ class RequestTeacherActivity : AppCompatActivity() {
                 }
             })
 
-            ADDGuestRequest(
-                binding.editGsName.text.toString(),
-                binding.editGsDesc.text.toString(),
-                dateteaching,
-                binding.editGsTimeStart.text.toString(),
-                binding.editGsTimeEnd.text.toString(),
-                binding.editGsNote.text.toString(),
-                idteacher,
-                idschool,
-                idclass,
-                "Specific",
-                "Requested",
-                "School"
-            )
+            if(generic==false){
+                ADDGuestRequest(
+                    binding.editGsName.text.toString(),
+                    binding.editGsDesc.text.toString(),
+                    dateteaching,
+                    binding.editGsTimeStart.text.toString(),
+                    binding.editGsTimeEnd.text.toString(),
+                    binding.editGsNote.text.toString(),
+                    idteacher,
+                    idschool,
+                    idclass,
+                    "Specific",
+                    "Requested",
+                    "School"
+                )
+            } else {
+                ADDGuestRequest(
+                    binding.editGsName.text.toString(),
+                    binding.editGsDesc.text.toString(),
+                    dateteaching,
+                    binding.editGsTimeStart.text.toString(),
+                    binding.editGsTimeEnd.text.toString(),
+                    binding.editGsNote.text.toString(),
+                    idteacher,
+                    idschool,
+                    null,
+                    "General",
+                    "Requested",
+                    "School"
+                )
+                Log.d("subject","CEK -$idclass")
+            }
        }
         binding.btSendTemp.setOnClickListener {
             getItems().observe(this, {
@@ -119,8 +138,14 @@ class RequestTeacherActivity : AppCompatActivity() {
         binding.toggleButtonGroup2.addOnButtonCheckedListener { toggleButtonGroup, checkedId, isChecked ->
             if (isChecked) {
                 when (checkedId) {
-                    R.id.bt_gs_generic ->binding.dropdownkelas.isVisible=false
-                    R.id.bt_gs_specific -> binding.dropdownkelas.isVisible=true
+                    R.id.bt_gs_generic ->{
+                        binding.dropdownkelas.isVisible=false
+                        generic=true
+                    }
+                    R.id.bt_gs_specific ->{
+                        binding.dropdownkelas.isVisible=true
+                        generic=false
+                    }
                 }
             } else {
             }
@@ -264,7 +289,7 @@ class RequestTeacherActivity : AppCompatActivity() {
         notes: String,
         idteacher: String,
         idschool: String,
-        idclass: String,
+        idclass: String?,
         target: String,
         status: String,
         createdby:String,) {

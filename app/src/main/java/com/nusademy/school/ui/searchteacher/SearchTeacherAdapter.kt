@@ -47,7 +47,7 @@ class SearchTeacherAdapter(val itemClickListener: SearchTeacherActivity) : Recyc
             binding.txtStatusTeacher.text = data.spesialitation?.name.toString()
 
             binding.root.setOnClickListener {
-                itemClickListener.onInviteClick(data.id.toString())}
+                itemClickListener.onInviteClick(data.user.id.toString())}
             }
 
 
