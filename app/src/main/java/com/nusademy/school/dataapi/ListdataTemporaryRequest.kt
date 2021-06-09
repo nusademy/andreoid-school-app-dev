@@ -31,11 +31,21 @@ class ListdataTemporaryRequest : ArrayList<ListdataTemporaryRequestItem>(){
         @SerializedName("teacher")
         val teacher: Teacher = Teacher(),
         @SerializedName("CreatedBy")
-        val createdBy: Any? = null
+        val createdBy: String? = null
     ) {
-        class Class(
+        data class Class(
+            @SerializedName("id")
+            val id: Int = 0,
+            @SerializedName("name")
+            val name: String = "",
+            @SerializedName("school")
+            val school: Int = 0,
+            @SerializedName("created_at")
+            val createdAt: String = "",
+            @SerializedName("updated_at")
+            val updatedAt: String = ""
         )
-    
+
         data class School(
             @SerializedName("id")
             val id: Int = 0,
@@ -56,7 +66,7 @@ class ListdataTemporaryRequest : ArrayList<ListdataTemporaryRequestItem>(){
             @SerializedName("updated_at")
             val updatedAt: String = ""
         )
-    
+
         data class Teacher(
             @SerializedName("id")
             val id: Int = 0,
@@ -81,9 +91,9 @@ class ListdataTemporaryRequest : ArrayList<ListdataTemporaryRequestItem>(){
             @SerializedName("full_name")
             val fullName: String = "",
             @SerializedName("school")
-            val school: Any? = null,
+            val school: Int = 0,
             @SerializedName("teacher")
-            val teacher: Int = 0,
+            val teacher: Any? = null,
             @SerializedName("mbti_result")
             val mbtiResult: Any? = null,
             @SerializedName("assignToRole")

@@ -20,7 +20,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="5dp"
-            android:hint="Nama Subject">
+            android:hint="Nama Mata Pelajaran">
 
             <!--this is the actual edit text which takes the input-->
 

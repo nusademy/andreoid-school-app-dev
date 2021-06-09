@@ -41,7 +41,7 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
 
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
-        actionBar?.setTitle("Guest Teacher Request")
+        actionBar?.setTitle("Permohonan Guru Tamu")
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.setDisplayHomeAsUpEnabled(true)
         GetListApply("Requested")
@@ -111,9 +111,6 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
             } else {
             }
         }
-
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -141,7 +138,6 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
 
         val name = adddialog.findViewById(R.id.edit_classname) as EditText
         val title = adddialog.findViewById(R.id.tv_title) as TextView
-        val btSave = adddialog.findViewById(R.id.bt_save) as Button
         val btCancel = adddialog.findViewById(R.id.bt_cancel) as Button
 
         if (edit) {
@@ -152,15 +148,6 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
         btCancel.setOnClickListener {
             adddialog.dismiss()
         }
-//        btSave.setOnClickListener {
-//            if(edit){
-//                EDITClass(name.text.toString(), idclass)
-//            }else{
-//                ADDClass(name.text.toString())
-//            }
-//
-//            adddialog.dismiss()
-//        }
         adddialog.show()
     }
 
@@ -246,6 +233,12 @@ class GuestTeacherRequestActivity : AppCompatActivity(), ItemClickListener {
                     pDialog.dismissWithAnimation()
                 }
             })
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        GetListApply("Requested")
     }
 }
 

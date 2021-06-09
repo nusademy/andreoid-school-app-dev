@@ -24,7 +24,10 @@ class ProfileEditActivity : AppCompatActivity() {
 
     //Ambil id dan token dari SharedPreference
     private val token= SharedPrefManager.getInstance(this).Getuser.token
-    private val id= SharedPrefManager.getInstance(this).Getuser.id
+    private val iduser= SharedPrefManager.getInstance(this).Getuser.id
+    private val idschool= SharedPrefManager.getInstance(this).Getuser.idschool
+    private val nameschool= SharedPrefManager.getInstance(this).Getuser.name
+    private val role= SharedPrefManager.getInstance(this).Getuser.role
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +39,7 @@ class ProfileEditActivity : AppCompatActivity() {
         pDialog.titleText = "Loading"
         pDialog.setCancelable(false)
 
-        GetSchoolProfile(id, token)
+        GetSchoolProfile(idschool, token)
 
         // Action Saat Button Save Di Klik
         binding.btSave.setOnClickListener(View.OnClickListener {
@@ -58,7 +61,7 @@ class ProfileEditActivity : AppCompatActivity() {
         pDialog.changeAlertType(KAlertDialog.PROGRESS_TYPE)
         pDialog.show()
         RetrofitClient.instanceUserApi.editProfileSchool(
-            id,
+            idschool,
             "Bearer " + token,
             name,
             headmaster,
@@ -73,6 +76,13 @@ class ProfileEditActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful) {
                         // Saat response sukses finnish activity (menutup/mengakhiri activity editprofile)
+                        SharedPrefManager.getInstance(applicationContext).setUser(
+                            iduser,
+                            idschool,token,
+                            response.body()?.name.toString(),
+                            role
+                        )
+
                         pDialog.changeAlertType(KAlertDialog.SUCCESS_TYPE)
                         pDialog.setTitleText("Berhasil")
                         pDialog.setContentText("Data Profil Sekolah Berhasil Diperbarui")

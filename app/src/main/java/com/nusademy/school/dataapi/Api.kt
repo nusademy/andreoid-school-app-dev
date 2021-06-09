@@ -43,7 +43,8 @@ interface Api {
 
     @GET("teachers")
     fun getSearchTeacher(
-        @Query("user.username_contains") name: String,@Header("Authorization") token: String
+        @Query("user.username_contains") name: String,@Header("Authorization") token: String,
+        @Query("spesialitation_contains") cek:String=""
     ): Call<ListDataTeacher>
 
     @GET("classes")
@@ -68,6 +69,12 @@ interface Api {
         @Query("Status_contains") status: String,
     ): Call<ListDataGuestRequest>
 
+    @GET("guest-teacher-requests/{id}")
+    fun getDetailGuestRequest(
+        @Header("Authorization") token: String,
+        @Path("id") idguest:String
+    ): Call<ListDataGuestRequestItem>
+
     @GET("temporary-teacher-requests")
     fun getTempRequest(
         @Header("Authorization") token: String,
@@ -76,6 +83,11 @@ interface Api {
         @Query("Status_contains") status: String,
     ): Call<ListdataTemporaryRequest>
 
+    @GET("temporary-teacher-requests/{id}")
+    fun getDetailTempRequest(
+        @Header("Authorization") token: String,
+        @Path("id") idtemp:String
+    ): Call<ListdataTemporaryRequestItem>
 
     // PUT ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     @FormUrlEncoded

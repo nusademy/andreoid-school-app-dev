@@ -11,7 +11,7 @@ data class DataTeacher(
     @SerializedName("major")
     val major: String = "",
     @SerializedName("ipk")
-    val ipk: Int = 0,
+    val ipk: Double = 0.0,
     @SerializedName("short_brief")
     val shortBrief: String = "",
     @SerializedName("video_branding")

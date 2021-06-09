@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
                                 response.body()?.user?.id.toString(),
                                 response.body()?.user?.school?.id.toString(),
                                 response.body()?.jwt.toString(),
-                                response.body()?.user?.fullName.toString(),
+                                response.body()?.user?.school?.name.toString(),
                                 response.body()?.user?.role?.name.toString()
                             )
                             val intent = Intent(this@LoginActivity, HomeActivity ::class.java)
@@ -73,7 +73,6 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(applicationContext, "Username/Email/Password Salah", Toast.LENGTH_SHORT).show()
                         pDialog.dismissWithAnimation()
                     }
-
                 }
 
                 override fun onFailure(calls: Call<DataLogin>, ts: Throwable) {

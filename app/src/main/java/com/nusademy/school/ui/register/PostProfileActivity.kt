@@ -88,7 +88,6 @@ class PostProfileActivity : AppCompatActivity() {
                             startActivity(intent)
                         }
 
-
                     } else {
                         Toast.makeText(applicationContext, "Gagal Cek kembali Isian", Toast.LENGTH_SHORT).show()
                     }

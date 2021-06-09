@@ -1,5 +1,6 @@
 package com.nusademy.school.ui.guestteacherrequest
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.developer.kalert.KAlertDialog
 import com.nusademy.school.dataapi.ListDataGuestRequest.ListDataGuestRequestItem
 import com.nusademy.school.databinding.ItemApplyrequestBinding
+import com.nusademy.school.ui.requestteacher.RequestTeacherActivity
 
 class GuestTeacherRequestAdapter(val itemClickListener: GuestTeacherRequestActivity,val enable:Boolean) : RecyclerView.Adapter<GuestTeacherRequestAdapter.ListDataViewHolder>() {
 
@@ -45,28 +47,18 @@ class GuestTeacherRequestAdapter(val itemClickListener: GuestTeacherRequestActiv
 
             binding.tvRequestName.text = data.name.toString()
             binding.tvTeacherName.text = data.topTalent.fullName.toString()
-//            binding.root.setOnClickListener {
-//
-////                val bundle = Bundle()
-////                bundle.putString("nameclass",data.name.toString())
-////                bundle.putString("idclass",  data.id.toString())
-//
-//
-//                val intent = Intent(itemView.context, SubjectActivity::class.java)
-//                intent.putExtra("nameclass", data.name.toString())
-//                intent.putExtra("idclass", data.id.toString())
-////                intent.putExtras(bundle)
-//                itemView.context.startActivity(intent)
-//
-//            }
+
 
             if (enable){
-                binding.btApprove.isVisible=true
-                binding.btReject.isVisible=true
-            }else{
+                binding.root.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailGuestTeacherRequestActivity::class.java)
+                    intent.putExtra("idguest", data?.id.toString())
+                    itemView.context.startActivity(intent)
+                }
+            }
                 binding.btApprove.isVisible=false
                 binding.btReject.isVisible=false
-            }
+
 
             binding.btApprove.setOnClickListener {
                itemClickListener.onApproveClick(data.id.toString())}

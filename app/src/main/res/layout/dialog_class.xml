@@ -54,6 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="0.5"
+            android:insetBottom="0dp"
             android:text="Batal" />
 
         <Button
@@ -61,6 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="0.5"
+            android:insetBottom="0dp"
             android:text="Simpan" />
     </LinearLayout>
 

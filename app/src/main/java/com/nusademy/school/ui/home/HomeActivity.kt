@@ -15,6 +15,7 @@ import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.school.R
 import com.nusademy.school.R.drawable
 import com.nusademy.school.databinding.ActivityHomeBinding
+import com.nusademy.school.ui.about.AboutActivity
 import com.nusademy.school.ui.classes.ClassesActivity
 import com.nusademy.school.ui.dialog.DialogInviteteacher
 import com.nusademy.school.ui.guestteacherrequest.GuestTeacherRequestActivity
@@ -44,7 +45,8 @@ class HomeActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        })
 
-
+        binding.tvSchoolName.text=SharedPrefManager.getInstance(this).Getuser.name
+        binding.tvRole.text=SharedPrefManager.getInstance(this).Getuser.role
 
 
         Glide.with(this)
@@ -61,37 +63,39 @@ class HomeActivity : AppCompatActivity() {
         imageList.add(SlideModel(drawable.carousel3))
 
 
-        binding.linearProfile.setOnClickListener(View.OnClickListener {
+        binding.btAbout.setOnClickListener {
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.linearProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
-        })
+        }
 
 
-        binding.btSearchteacher.setOnClickListener(View.OnClickListener {
+        binding.btSearchteacher.setOnClickListener {
             val intent = Intent(this, SearchTeacherActivity::class.java)
             startActivity(intent)
-        })
+        }
 
-        binding.btClasses.setOnClickListener(View.OnClickListener {
+        binding.btClasses.setOnClickListener {
             val intent = Intent(this, ClassesActivity::class.java)
             startActivity(intent)
-        })
+        }
 
-        binding.btGuestrequest.setOnClickListener(View.OnClickListener {
+        binding.btGuestrequest.setOnClickListener{
             val intent = Intent(this, GuestTeacherRequestActivity::class.java)
             startActivity(intent)
-        })
+        }
 
-        binding.btTemprequest.setOnClickListener(View.OnClickListener {
+        binding.btTemprequest.setOnClickListener {
             val intent = Intent(this, TempTeacherRequestActivity::class.java)
             startActivity(intent)
-        })
+        }
 
         val id= SharedPrefManager.getInstance(this).Getuser.id
         val token = SharedPrefManager.getInstance(this).Getuser.token
-        binding.btRecrute.setOnClickListener(View.OnClickListener {
-            DialogInviteteacher(this).show()
-        })
 
 
         val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
@@ -104,10 +108,13 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
             if(SharedPrefManager.getInstance(this).Getuser.idschool=="null"){
                 val intent = Intent(applicationContext, PostProfileActivity::class.java)
                 startActivity(intent)
             }
+        binding.tvSchoolName.text=SharedPrefManager.getInstance(this).Getuser.name
+        binding.tvRole.text=SharedPrefManager.getInstance(this).Getuser.role
     }
 
 

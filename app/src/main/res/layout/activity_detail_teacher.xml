@@ -22,10 +22,10 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="60dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,14 +43,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -63,14 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pendidikan Terakhir "
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_pendidikan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -83,14 +83,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kampus"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_kampus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -103,14 +103,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jurusan"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_jurusan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -123,14 +123,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="IPK"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_ipk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -143,14 +143,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Spesialisasi"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_spesialisasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -163,14 +163,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bio"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -183,14 +183,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Video Diri"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_video"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -203,14 +203,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Linkedin"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_linkedin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -223,14 +223,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Domisili"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_domisili"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ahmad Tomi"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -262,15 +262,5 @@
             android:insetBottom="0dp"
             android:text="Undang" />
     </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

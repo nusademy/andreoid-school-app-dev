@@ -57,7 +57,7 @@ class SubjectActivity : AppCompatActivity(), ItemClickListener {
 
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
-        actionBar?.setTitle("Subject")
+        actionBar?.setTitle("Mata Pelajaran")
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -85,7 +85,7 @@ class SubjectActivity : AppCompatActivity(), ItemClickListener {
         }
 
         dataBinding.btAddSubject.setOnClickListener {
-            initCustomDialog("Tambah Subject", false, "", "","","")
+            initCustomDialog("Tambah Mata Pelajaran", false, "", "","","")
         }
 
 

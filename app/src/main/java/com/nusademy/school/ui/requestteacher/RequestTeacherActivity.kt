@@ -48,6 +48,12 @@ class RequestTeacherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRequestTeacherBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
+        actionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
+        actionBar?.setTitle("Undang Guru")
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+
         idteacher = intent.getStringExtra("idteacher").toString()
         binding.btSendGuest.setOnClickListener {
             getItems().observe(this, {
@@ -155,7 +161,7 @@ class RequestTeacherActivity : AppCompatActivity() {
 
         val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
             // Display Selected date in Toast
-            binding.editTmDate.setText("${twodigit((dayOfMonth).toString())}-${twodigit((monthOfYear + 1).toString())}-$year")
+            binding.editGsDate.setText("${twodigit((dayOfMonth).toString())}-${twodigit((monthOfYear + 1).toString())}-$year")
             dateteaching="$year-${twodigit((monthOfYear + 1).toString())}-${twodigit((dayOfMonth).toString())}"
         }, year, month, day)
         dpd.show()
@@ -370,6 +376,10 @@ class RequestTeacherActivity : AppCompatActivity() {
                     pDialog.dismissWithAnimation()
                 }
             })
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 

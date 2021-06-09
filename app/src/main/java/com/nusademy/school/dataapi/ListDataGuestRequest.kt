@@ -29,7 +29,7 @@ class ListDataGuestRequest : ArrayList<ListDataGuestRequestItem>(){
         @SerializedName("school")
         val school: School = School(),
         @SerializedName("class")
-        val classX: Any? = null,
+        val classX: Class? = null,
         @SerializedName("created_at")
         val createdAt: String = "",
         @SerializedName("updated_at")
@@ -57,11 +57,11 @@ class ListDataGuestRequest : ArrayList<ListDataGuestRequestItem>(){
             @SerializedName("updated_at")
             val updatedAt: String = "",
             @SerializedName("top_talent")
-            val topTalent: Int = 0,
+            val topTalent: Any? = null,
             @SerializedName("full_name")
             val fullName: String = "",
             @SerializedName("school")
-            val school: Any? = null,
+            val school: Int = 0,
             @SerializedName("teacher")
             val teacher: Any? = null,
             @SerializedName("mbti_result")
@@ -69,7 +69,6 @@ class ListDataGuestRequest : ArrayList<ListDataGuestRequestItem>(){
             @SerializedName("assignToRole")
             val assignToRole: Any? = null
         )
-    
         data class School(
             @SerializedName("id")
             val id: Int = 0,
@@ -85,6 +84,18 @@ class ListDataGuestRequest : ArrayList<ListDataGuestRequestItem>(){
             val website: String = "",
             @SerializedName("creator")
             val creator: Int = 0,
+            @SerializedName("created_at")
+            val createdAt: String = "",
+            @SerializedName("updated_at")
+            val updatedAt: String = ""
+        )
+        data class Class(
+            @SerializedName("id")
+            val id: Int = 0,
+            @SerializedName("name")
+            val name: String = "",
+            @SerializedName("school")
+            val school: Int = 0,
             @SerializedName("created_at")
             val createdAt: String = "",
             @SerializedName("updated_at")

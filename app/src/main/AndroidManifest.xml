@@ -14,7 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nusademy"
         tools:replace="android:icon">
-        <activity android:name=".ui.register.PostProfileActivity"></activity>
+        <activity android:name=".ui.tempteacherrequest.DetailTempteacherActivity"></activity>
+        <activity android:name=".ui.guestteacherrequest.DetailGuestTeacherRequestActivity" />
+        <activity android:name=".ui.searchteacher.DetailTeacherActivity" />
+        <activity
+            android:name=".ui.about.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/Theme.Nusademy.NoActionBar" />
+        <activity android:name=".ui.register.PostProfileActivity" />
         <activity android:name=".ui.register.RegisterActivity" />
         <activity android:name=".ui.guestteacherrequest.GuestTeacherRequestActivity" />
         <activity android:name=".ui.tempteacherrequest.TempTeacherRequestActivity" />
