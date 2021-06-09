@@ -70,6 +70,13 @@
     <string name="changeprofil">Change Profile</string>
     <string name="logout">Log Out ></string>
     <string name="title_activity_teacher_profil">TeacherProfilActivity</string>
+    <string name="school_name">Nama Sekolah</string>
+    <string name="headschool">Kepala Sekolah</string>
+    <string name="location">Alamat</string>
+    <string name="website">Website</string>
+    <string name="phone">Phone Number</string>
+    <string name="logout_ina"><![CDATA[Keluar  >]]></string>
+    <string name="changeprofil_ina">Ubah Profil</string>
 
 
 </resources>

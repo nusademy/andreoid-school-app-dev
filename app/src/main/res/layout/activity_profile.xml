@@ -1,132 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.profile.ProfileActivity">
 
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_group_90"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="450dp"
+        app:srcCompat="@drawable/ic_group_120" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="69dp">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-            android:layout_marginHorizontal="250dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/ic_group_77" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_logo_school"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            tools:src="@color/logoschool" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_name_school_profil"
-            android:layout_width="193dp"
-            android:layout_height="22dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:text="@string/name_school_profil"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_email_school_profil"
-            android:layout_width="149dp"
-            android:layout_height="15dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:text="@string/email_school_profil"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_location_school_profil"
-            android:layout_width="222dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/location_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_website_school_profil"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/website_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnback"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ic_circle"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_phone_school_profil"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="28dp"
-            android:text="@string/phone_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_teacher"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                tools:src="@drawable/profile_null" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/etv_mailnonres_school_profil"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="28dp"
-            android:text="@string/emailnonres_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tv_name_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/school_name"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_avatar_user"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_changeprofil"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:cropToPadding="false"
-            android:src="@drawable/shape_background"
-            android:text="@string/changeprofil"
-            android:textAllCaps="false"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_name_school_profil"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:text="@string/name_school_profil"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="start"
+                android:maxLines="10"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_name_school"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_school" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_logout"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:backgroundTint="@color/white"
-            android:cropToPadding="false"
-            android:src="@drawable/shape_background"
-            android:text="@string/logout"
-            android:textAllCaps="false"
-            android:textColor="@color/primary"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_headschool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/headschool"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_name"
+                app:layout_constraintVertical_bias="0.0" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_email_school_profil"
+                android:textStyle="bold"
+                android:text="@string/email_school_profil"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_user"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_user" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/location"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_email"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_website_school_profil"
+                android:textStyle="bold"
+                android:text="@string/location_school_profil"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_lasteducation"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lasteducation" />
+
+            <TextView
+                android:id="@+id/tv_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/website"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lasteducation_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_location_school_profil"
+                android:textStyle="bold"
+                android:text="@string/website_school_profil"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_campus"
+                app:layout_constraintTop_toBottomOf="@+id/tv_campus" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/phone"
+                android:textColor="@color/primarydark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/campus_teacher_profil"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_phone_school_profil"
+                android:textStyle="bold"
+                android:text="@string/phone_school_profil"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_major"
+                app:layout_constraintTop_toBottomOf="@+id/tv_major" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_changeprofil"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:cropToPadding="false"
+                android:src="@drawable/shape_background"
+                android:text="@string/changeprofil_ina"
+                android:textAllCaps="false"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/white"
+                android:cropToPadding="false"
+                android:src="@drawable/shape_background"
+                android:text="@string/logout_ina"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,9 +8,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_icon"
+        android:icon="@mipmap/nusademyicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/nusademyicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nusademy"
         tools:replace="android:icon">

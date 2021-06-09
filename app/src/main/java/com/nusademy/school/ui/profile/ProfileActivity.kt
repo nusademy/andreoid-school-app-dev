@@ -12,6 +12,7 @@ import com.nusademy.nusademy.dataapi.RetrofitClient
 import com.nusademy.nusademy.storage.SharedPrefManager
 import com.nusademy.school.dataapi.DataProfileSchool
 import com.nusademy.school.databinding.ActivityProfileBinding
+import com.nusademy.school.ui.home.HomeActivity
 import com.nusademy.school.ui.tempteacherrequest.TempTeacherRequestActivity
 import com.nusademy.school.ui.login.LoginActivity
 import retrofit2.Call
@@ -33,6 +34,11 @@ class ProfileActivity : AppCompatActivity() {
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
         GetSchoolProfile(id, token)
+
+        binding.btnback.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, HomeActivity ::class.java)
+            startActivity(intent)
+        })
 
         binding.btnChangeprofil.setOnClickListener(
             View.OnClickListener {
@@ -77,7 +83,7 @@ class ProfileActivity : AppCompatActivity() {
                         binding.tvWebsiteSchoolProfil.text = data?.website.toString()
                         binding.tvLocationSchoolProfil.text = data?.address.toString()
                         binding.tvPhoneSchoolProfil.text = data?.phoneNumber.toString()
-                        binding.etvMailnonresSchoolProfil.text = data?.headmaster.toString()
+                        //binding.etvMailnonresSchoolProfil.text = data?.headmaster.toString()
 
                         // Cek Koneksi API Gagal
                     } else {
