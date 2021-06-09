@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nusademy"
         tools:replace="android:icon">
-        <activity android:name=".ui.tempteacherrequest.DetailTempteacherActivity"></activity>
+        <activity android:name=".ui.profile.ProfileUserEditActivity"></activity>
+        <activity android:name=".ui.tempteacherrequest.DetailTempteacherActivity" />
         <activity android:name=".ui.guestteacherrequest.DetailGuestTeacherRequestActivity" />
         <activity android:name=".ui.searchteacher.DetailTeacherActivity" />
         <activity

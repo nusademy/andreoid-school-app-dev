@@ -7,9 +7,11 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.developer.kalert.KAlertDialog
 import com.nusademy.nusademy.dataapi.RetrofitClient
 import com.nusademy.nusademy.storage.SharedPrefManager
+import com.nusademy.school.R
 import com.nusademy.school.dataapi.DataProfileSchool
 import com.nusademy.school.databinding.ActivityProfileBinding
 import com.nusademy.school.ui.home.HomeActivity
@@ -31,6 +33,10 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Glide.with(this)
+            .load(R.drawable.profile_null)
+            .into(binding.ivLogoSchool)
+
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
         GetSchoolProfile(id, token)
@@ -46,6 +52,10 @@ class ProfileActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         )
+        binding.btnChangeAccount.setOnClickListener {
+            val intent = Intent(this, ProfileUserEditActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnLogout.setOnClickListener {
             SharedPrefManager.getInstance(applicationContext).setLogin(false)
             val intent = Intent(this, LoginActivity::class.java)
@@ -80,10 +90,18 @@ class ProfileActivity : AppCompatActivity() {
                         val data = response.body()
                         binding.tvNameSchoolProfil.text = data?.name.toString()
                         binding.tvEmailSchoolProfil.text = data?.headmaster.toString()
+<<<<<<< HEAD
                         binding.tvWebsiteSchoolProfil.text = data?.website.toString()
                         binding.tvLocationSchoolProfil.text = data?.address.toString()
                         binding.tvPhoneSchoolProfil.text = data?.phoneNumber.toString()
                         //binding.etvMailnonresSchoolProfil.text = data?.headmaster.toString()
+=======
+                        binding.tvWeb.text = data?.website.toString()
+                        binding.tvAddress.text = data?.address.toString()
+                        binding.tvTelp.text = data?.phoneNumber.toString()
+                        binding.tvHeadmaster.text = data?.headmaster.toString()
+                        binding.tvNama.text = data?.name.toString()
+>>>>>>> afaa6940977ebc1b6f7f754a70640b9862110a62
 
                         // Cek Koneksi API Gagal
                     } else {
