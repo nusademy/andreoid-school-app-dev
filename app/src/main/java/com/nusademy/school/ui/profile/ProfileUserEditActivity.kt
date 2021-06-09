@@ -64,14 +64,6 @@ class ProfileUserEditActivity : AppCompatActivity() {
                     pDialog.dismissWithAnimation()
                     if (response.isSuccessful) {
                         // Saat response sukses finnish activity (menutup/mengakhiri activity editprofile)
-                        SharedPrefManager.getInstance(applicationContext).setUser(
-                            iduser,
-                            idschool,
-                            token,
-                            response.body()?.fullName.toString(),
-                            rolename
-                        )
-
                         finish()
                     } else {
                         Toast.makeText(applicationContext, "Gagal Cek kembali Isian", Toast.LENGTH_SHORT).show()

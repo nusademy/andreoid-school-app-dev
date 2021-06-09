@@ -35,7 +35,7 @@ class ProfileActivity : AppCompatActivity() {
 
         Glide.with(this)
             .load(R.drawable.profile_null)
-            .into(binding.ivLogoSchool)
+            .into(binding.ivTeacher)
 
         val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar?.hide()
@@ -90,18 +90,9 @@ class ProfileActivity : AppCompatActivity() {
                         val data = response.body()
                         binding.tvNameSchoolProfil.text = data?.name.toString()
                         binding.tvEmailSchoolProfil.text = data?.headmaster.toString()
-<<<<<<< HEAD
                         binding.tvWebsiteSchoolProfil.text = data?.website.toString()
                         binding.tvLocationSchoolProfil.text = data?.address.toString()
                         binding.tvPhoneSchoolProfil.text = data?.phoneNumber.toString()
-                        //binding.etvMailnonresSchoolProfil.text = data?.headmaster.toString()
-=======
-                        binding.tvWeb.text = data?.website.toString()
-                        binding.tvAddress.text = data?.address.toString()
-                        binding.tvTelp.text = data?.phoneNumber.toString()
-                        binding.tvHeadmaster.text = data?.headmaster.toString()
-                        binding.tvNama.text = data?.name.toString()
->>>>>>> afaa6940977ebc1b6f7f754a70640b9862110a62
 
                         // Cek Koneksi API Gagal
                     } else {
