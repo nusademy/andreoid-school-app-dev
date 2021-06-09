@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileActivity">
 
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_group_90"
-        tools:ignore="ContentDescription" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -61,49 +51,131 @@
             android:textColor="@color/black"
             android:textSize="13sp" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_location_school_profil"
-            android:layout_width="222dp"
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/location_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar_teacher">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_website_school_profil"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/website_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_phone_school_profil"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="28dp"
-            android:text="@string/phone_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/etv_mailnonres_school_profil"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="28dp"
-            android:text="@string/emailnonres_school_profil"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Nama"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kepala Sekolah   "
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_headmaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No.Telp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_telp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_changeprofil"
-            android:layout_width="170dp"
+            android:layout_width="215dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
@@ -114,11 +186,23 @@
             android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_logout"
-            android:layout_width="170dp"
+            android:id="@+id/btn_change_account"
+            android:layout_width="215dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="5dp"
+            android:cropToPadding="false"
+            android:src="@drawable/shape_background"
+            android:text="Ubah Akun"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            android:layout_width="215dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:backgroundTint="@color/white"
             android:cropToPadding="false"
             android:src="@drawable/shape_background"

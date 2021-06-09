@@ -67,7 +67,7 @@
     <string name="website_school_profil">https://smkn1juwiring.sch.id/</string>
     <string name="phone_school_profil">(0272) 551102</string>
     <string name="emailnonres_school_profil">smknegeri1juwiring@yahoo.com</string>
-    <string name="changeprofil">Change Profile</string>
+    <string name="changeprofil">Ubah Profil Sekolah</string>
     <string name="logout">Log Out ></string>
     <string name="title_activity_teacher_profil">TeacherProfilActivity</string>
 

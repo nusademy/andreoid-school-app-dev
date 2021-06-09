@@ -2,6 +2,7 @@ package com.nusademy.nusademy.dataapi
 
 import DataLogin
 import DataLogin.User
+import com.nusademy.school.dataapi.DataBasicUser
 import com.nusademy.school.dataapi.DataProfileSchool
 import com.nusademy.school.dataapi.DataTeacher
 import com.nusademy.school.dataapi.DataUser
@@ -41,6 +42,10 @@ interface Api {
         @Path("id") id: String,@Header("Authorization") token: String
     ): Call<DataProfileSchool>
 
+    @GET("users/{id}")
+    fun getProfileBasicUser(
+        @Path("id") id: String,@Header("Authorization") token: String
+    ): Call<DataBasicUser>
 
     @GET("teachers")
     fun getSearchTeacher(
@@ -102,6 +107,14 @@ interface Api {
         @Field("phone_number") phone_number: String?,
         @Field("website") website: String?,
         ):Call<DataProfileSchool>
+    @FormUrlEncoded
+    @PUT("users/{id}")
+    fun editProfileUsers(
+        @Path("id") id: String,
+        @Header("Authorization") token: String,
+        @Field("full_name") fullName: String?,
+        @Field("email") email: String?,
+    ):Call<DataBasicUser>
 
     @FormUrlEncoded
     @PUT("classes/{id}")
