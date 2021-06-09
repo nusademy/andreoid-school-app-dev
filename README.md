@@ -1,5 +1,5 @@
 # android-school-app-dev
-[![Continuous Integration Workflow](https://github.com/nusademy/android-dev/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/nusademy/android-dev/actions/workflows/main.yml)
+[![Continuous Integration Workflow](https://github.com/nusademy/android-dev/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/nusademy/android-dev/actions/workflows/main.yml)   
 ![](https://github.com/nusademy/Bangkit2021CapstoneProject/raw/main/logo/logo.png)
 
 ## Description
