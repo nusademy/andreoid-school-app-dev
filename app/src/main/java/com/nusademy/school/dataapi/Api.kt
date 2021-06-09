@@ -41,9 +41,10 @@ interface Api {
         @Path("id") id: String,@Header("Authorization") token: String
     ): Call<DataProfileSchool>
 
+
     @GET("teachers")
     fun getSearchTeacher(
-        @Query("user.username_contains") name: String,@Header("Authorization") token: String,
+        @Query("user.full_name_contains") name: String,@Header("Authorization") token: String,
         @Query("spesialitation_contains") cek:String=""
     ): Call<ListDataTeacher>
 

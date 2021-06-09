@@ -43,8 +43,10 @@ class SearchTeacherActivity : AppCompatActivity(), ItemClickListener {
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
-
         searchTeacherItem()
+        dataBinding.btSearch.setOnClickListener {
+            searchTeacherItem()
+        }
         getUsers().observe(this, {
             if (it != null) {
                 dataAdapter.setDataUser(it)
@@ -75,10 +77,8 @@ class SearchTeacherActivity : AppCompatActivity(), ItemClickListener {
 
 
     private fun searchTeacherItem() {
-//        val query = dataBinding.txtSearchuser.text.toString()
-        val query=""
+        val query = dataBinding.editSearch.text.toString()
 //        if (query.isEmpty()) return
-//        showLoading(true)
         setUsers(query)
     }
 
